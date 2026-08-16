@@ -115,6 +115,11 @@ if __name__ == '__main__':
 - **Where:** `for key, value in result.items():`
 - **Technique:** Calling `.items()` converts dictionary key-value entries into a list of tuples `(key, value)`, allowing direct access to both variables within loop iterations.
 
+### 6. Handling multi-line inputs via 'while True' & 'EOFError'
+
+- **Where:** `while True:` block paired with `except EOFError:`
+- **Technique:** Combining an infinite `while True` loop with `input()` allows continuous multi-line input collection (dynamically appending values to a list or updating a structure per iteration). The loop only breaks when the user sends an EOF signal (`Control-D`), triggering the `except EOFError` block to safely exit.
+
 ---
 
 ## ⚡ Code Simplification: Why Method 2 is Superior
