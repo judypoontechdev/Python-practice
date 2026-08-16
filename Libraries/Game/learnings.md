@@ -1,10 +1,8 @@
 ## 1. Mastering `while True`, `try-except-else` Control Flow
 
-Handling user input validation effectively requires a solid understanding of loop control keywords (`break` vs. `continue`) and implicit fallback logic.
-
 ### Takeaway 1.1: Strategic Use of `break` vs. `continue`
 
-When running an infinite loop (`while True`) to sanitize inputs, **you only have one `break` keyword per loop** before it exits completely.
+When running an infinite loop (`while True`) to sanitize inputs, **we only have one `break` keyword per loop** before it exits completely.
 
 - **First Loop (Getting `level`):** The sole purpose of this loop is to prompt until a valid positive integer is supplied. Once `level > 0` passes, we can immediately call `break` to exit and move on to generating the secret number.
 - **Second Loop (Processing `guess`):** Here, the loop's final exit condition must be reserved for when the player actually wins (`generate(answer, guess)` returns `True`). Therefore, to validate `guess` as a positive integer within the loop without prematurely exiting, we **flip the validation logic** using `if guess <= 0: continue`. This rejects invalid inputs by forcing a re-prompt while saving the single `break` trigger for the win state.
@@ -25,7 +23,7 @@ while True:
 
 ### Takeaway 1.2: Implicit Reprompting (Omitting Redundant `else: continue`)
 
-In block configurations like `if level > 0: break`, writing an explicit `else: continue` is unnecessary boilerplate.
+In block configurations like `if level > 0: break`, writing `else: continue` is unnecessary.
 
 - When `level > 0` evaluates to `False`, Python skips the `break` statement and continues execution downward.
 - Since there is no further code remaining in that iteration, control naturally loops back to the top of `while True:`, re-prompting the user automatically.
