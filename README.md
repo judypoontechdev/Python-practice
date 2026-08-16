@@ -72,6 +72,8 @@ Inside each chapter directory, exercises follow a strict organizational rule dep
     - **Code Implementation:** Clean, syntax-highlighted code block.
     - **Learnings & Gotchas:** Essential takeaways, mistake analysis, syntax notes, and optimization comparisons.
 
+** Comparison with Javascript **
+Having recently completed a JavaScript course, I also include JavaScript code comparisons in some of the learning reflections to reinforce syntax equivalencies and solidify my understanding across both languages.
 ---
 
 ## 🗂️ Course Modules Breakdown
