@@ -58,12 +58,12 @@ Inside each chapter directory, exercises follow a strict organizational rule dep
 
 ### 1. Standalone Python File (`exercise_name.py`)
 
-- **When used:** Applicable for straightforward solutions completed smoothly without notable logic bugs or architectural edge cases.
+- **When used:** Used when completing exercises without encountering errors.
 - **Content:** Contains clean, functional Python code where top-of-file comments articulate the task requirements and implementation scope.
 
 ### 2. Dedicated Exercise Folder (`exercise_folder/`)
 
-- **When used:** Applicable for exercises involving important algorithmic patterns, common gotchas, multiple iterations, or key syntax learnings.
+- **When used:** Used when encountering errors while building the code to document learnings and fixes.
 - **Folder Contents:**
   - `solution.py` — The functional Python solution code.
   - `learnings.md` — A comprehensive markdown note documenting:
