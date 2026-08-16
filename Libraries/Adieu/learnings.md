@@ -25,8 +25,9 @@ Implement a program that continuously prompts the user for names (one per line) 
 
 ## 3. Code Implementation
 
+```python
 def main():
-names = []
+    names = []
 
     while True:
         try:
@@ -39,17 +40,20 @@ names = []
 
     output(names)
 
-def output(names):
-if len(names) == 1:
-print(f"Adieu, adieu, to {names[0]}")
-elif len(names) == 2:
-print(f"Adieu, adieu, to {names[0]} and {names[1]}")
-elif len(names) > 2:
-formatted_names = ", ".join(names[:-1])
-print(f"Adieu, adieu, to {formatted_names}, and {names[-1]}")
 
-if **name** == "**main**":
-main()
+def output(names):
+    if len(names) == 1:
+        print(f"Adieu, adieu, to {names[0]}")
+    elif len(names) == 2:
+        print(f"Adieu, adieu, to {names[0]} and {names[1]}")
+    elif len(names) > 2:
+        formatted_names = ", ".join(names[:-1])
+        print(f"Adieu, adieu, to {formatted_names}, and {names[-1]}")
+
+
+if __name__ == "__main__":
+    main()
+```
 
 ---
 
