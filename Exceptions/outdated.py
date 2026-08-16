@@ -1,3 +1,7 @@
+# **Task description**
+# Prompts the user for a date in `M/D/YYYY` or `Month Day, Year` format
+#  and outputs it in ISO 8601 `YYYY-MM-DD` format with leading zeroes, 
+# reprompting the user if the input date is invalid.
 
 def main():
 

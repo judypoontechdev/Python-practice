@@ -1,3 +1,9 @@
+# **Task description**
+#Prompts the user for the answer to the Great Question of Life,
+#  the Universe, and Everything, outputting `Yes` if the input is `42`, 
+# `forty-two`, or `forty two` (case-insensitively), and `No` otherwise.
+
+
 def main():
     #Prompt user for the answer to the great question of life
     answer = input('What is the Great Question of Life? ').lower().strip()

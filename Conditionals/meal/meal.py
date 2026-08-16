@@ -1,3 +1,9 @@
+## **Task description**
+# Converts a 24-hour time string (`#:##` or `##:##`) into
+# a float duration using a helper function `convert()`, then
+#  outputs whether it is `breakfast time` (7–8), `lunch time`
+#  (12–13), or `dinner time` (18–19).
+
 def main():
     #Prompt user to input time
     time = input('What is the time now? ')

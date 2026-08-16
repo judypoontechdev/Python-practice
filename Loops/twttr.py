@@ -1,3 +1,7 @@
+# **Task description**
+# Prompts the user for a string of text and outputs it with 
+# all uppercase and lowercase vowels (A, E, I, O, U) omitted.
+
 def main():
     # Prompt the user to input a word or string
     word = input('Input: ')

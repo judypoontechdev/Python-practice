@@ -1,3 +1,7 @@
+# **Task description**
+# Prompts the user for a fraction `X/Y` and calculates the fuel level percentage 
+# rounded to the nearest integer, outputting `E` for 1% or less, `F` for 99% or 
+# more, and reprompting on invalid inputs or exceptions (`ValueError`, `ZeroDivisionError`).
 
 def main():
     while True:

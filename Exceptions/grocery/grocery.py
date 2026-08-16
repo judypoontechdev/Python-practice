@@ -1,3 +1,7 @@
+# **Task description**
+# Prompts the user for grocery items until Control-D (`EOFError`) is entered, 
+# then outputs a sorted, uppercase list of the items prefixed by their respective counts.
+
 def main():
 
     counting = {}

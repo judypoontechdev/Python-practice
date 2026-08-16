@@ -1,3 +1,7 @@
+# **Task description**
+# Prompts the user for a fruit name (case-insensitively) and outputs the 
+# corresponding number of calories in one portion based on the FDA’s 
+# nutrition poster, ignoring invalid entries.
 
 def main():
     # Prompt the user for a fruit name and convert it to lowercase for matching

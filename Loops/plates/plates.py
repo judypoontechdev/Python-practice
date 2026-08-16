@@ -1,3 +1,8 @@
+# **Task description**
+# Implements an `is_valid()` function to validate custom license plate 
+# strings against specific rules (2–6 characters, starts with two letters, 
+# numbers only at the end without a leading '0', and no punctuation/spaces).
+
 def main():
     plate = input("Plate: ")
     if is_valid(plate):

@@ -1,3 +1,8 @@
+# **Task description**
+# Expects zero command-line arguments (for a random font) or two arguments (`-f` or `--font` 
+# followed by a font name), prompts the user for text, and outputs it as ASCII art using 
+# `pyfiglet`, exiting with an error message on invalid CLI inputs.
+
 # Import required libraries
 import random
 from pyfiglet import Figlet
@@ -36,4 +41,3 @@ def main():
     print(figlet.renderText(word))
 
 main()
-

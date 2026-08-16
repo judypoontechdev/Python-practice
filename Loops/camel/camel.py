@@ -1,3 +1,8 @@
+# **Task description**
+# Prompts the user for a variable name in camelCase and converts 
+# it into Python's recommended snake_case by inserting 
+# underscores before uppercase letters and converting them to lowercase.
+
 def main():
     # Prompt the user for camelCase input
     camel = input('camelCase: ')

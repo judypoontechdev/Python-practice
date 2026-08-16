@@ -1,3 +1,8 @@
+# **Task description**
+# Takes a space-separated arithmetic expression `x y z` 
+# (e.g., `1 + 1`), evaluates the operation (`+`, `-`, `*`, or `/`), 
+# and outputs the result as a float formatted to one decimal place.
+
 def main():
     # prompt user to input maths formula
     formula = input('Pls provide maths formula: ').split()

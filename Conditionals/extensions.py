@@ -1,3 +1,7 @@
+# **Task description**
+# Reads a file name input and maps its extension to the corresponding HTTP 
+# media type (MIME type, e.g., `image/jpeg`, `application/pdf`), defaulting 
+# to `application/octet-stream` for unknown extensions.
 
 def main():
     # Prompt user for file name and convert to lowercase for case-insensitive match

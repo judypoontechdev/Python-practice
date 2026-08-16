@@ -1,3 +1,7 @@
+# **Task description**
+# Enables users to place an order line-by-line, updating and displaying 
+# the running total formatted to two decimal places after each item, 
+# ignoring invalid inputs until interrupted with Control-D (`EOFError`).
 
 def main():
 

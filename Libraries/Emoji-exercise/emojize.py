@@ -1,3 +1,8 @@
+# **Task description**
+# Prompts the user for a string in English and outputs the "emojized" 
+# version by converting any emoji codes or aliases (e.g., `:thumbs_up:` 
+# or `:thumbsup:`) into their corresponding emoji.
+
 import emoji
 
 # Prompt user for input

@@ -1,3 +1,8 @@
+# **Task description**
+# Simulates a vending machine selling Coke for 50 cents, prompting the user for 
+# accepted coins (25, 10, or 5 cents) one at a time, displaying the remaining 
+# amount due, and outputting any change owed once at least 50 cents is inserted.
+
 def main():
 
     # Initialize the total amount inserted to 0

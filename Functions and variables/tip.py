@@ -1,3 +1,8 @@
+# **Task description**
+# Implements `dollars_to_float()` to strip a leading `$` from currency 
+# inputs and `percent_to_float()` to strip a trailing `%` and convert 
+# to a decimal float, calculating the total tip amount.
+
 def main():
     dollars = dollars_to_float(input("How much was the meal? "))
     percent = percent_to_float(input("What percentage would you like to tip? "))

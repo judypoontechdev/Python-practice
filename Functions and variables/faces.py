@@ -1,3 +1,7 @@
+# **Task description**
+# Implements a `convert()` function that replaces emoticons `:)` 
+# with `🙂` and `:(` with `🙁`, and a `main()` function to 
+# process and display user input.
 
 def main():
     # Get user input and print the converted string with emojis
