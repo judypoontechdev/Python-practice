@@ -1,6 +1,6 @@
 # CS50P: Harvard CS50’s Introduction to Programming with Python
 
-This repository documents my structured learning journey, solutions, and key takeaways through Harvard's CS50P course. The goal is to build independent Python's proficiency and understanding to the language.
+This repository documents my structured learning journey, solutions, and key takeaways through Harvard's CS50P course. The goal is to build independent Python proficiency and a deep understanding of the language.
 
 ---
 
