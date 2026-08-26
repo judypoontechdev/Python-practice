@@ -9,6 +9,18 @@ From largest to smallest, outer to inner, Python's code structure can be broken 
 - **Module 📄**: A single Python file (e.g., `math_tools.py`) used to group related functions together.
 - **Function 🛠️**: The smallest executable unit within a file (e.g., `def add(a, b):`).
 
+### Directory & File Layout Example:
+```text
+my_toolbox/
+│
+├── __init__.py      # Contains: `from .math_tools import add` (exposes lower-level module functions to the package's top level)
+├── math_tools.py    # Contains: `def add(a, b): return a + b`
+└── string_tools.py
+```
+
+**What this means:**
+We can directly write `import my_toolbox` and then `result = my_toolbox.add(3, 5)`, instead of having to explicitly type `from my_toolbox import math_tools` first.
+
 ---
 
 ## 2. What is the dot (`.`) for?
