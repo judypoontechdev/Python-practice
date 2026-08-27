@@ -117,40 +117,30 @@ class Professor(Wizard):
 student = Student("Harry", "Gryffindor")
 print(student.name)   # Inherited from Wizard -> outputs "Harry"
 ```
-
 ## 5. Operator Overloading
+Operator overloading allows you to redefine how standard mathematical symbols (like `+`, `-`, `*`) work with your custom class objects by defining dunder methods like `__add__`. 
 
-Operator overloading allows you to redefine how standard mathematical symbols (like `+`, `-`, `*`) work with your custom class objects by defining dunder methods like `__add__`.
-
-Remember that **`self` and `other` are just variable names** representing the objects; you can technically name them anything (like `left_obj` and `right_obj`). A class is simply a blueprint, and **both** the left-side object and the right-side object are fully functional instances of that class. Because they are both objects from the same blueprint, **both** can access any attributes or methods inside the class.
+In `__add__`, **both arguments refer to `self` of two different objects**. You can name them anything you like (e.g., `left_obj` and `right_obj`), and Python will always know how to find the corresponding instance data for each unique object.
 
 **Code Example (Combining Game Scores):**
-
 ```python
 class Score:
     def __init__(self, points):
         self.points = points
 
-    def print_info(self):
-        return f"Score value: {self.points}"
-
-    # You can name the parameters anything (e.g., left_obj and right_obj),
-    # and both can access instance attributes or methods!
+    # Both arguments refer to 'self' of two different objects. 
+    # You can name them anything, and they will access their own instance attributes!
     def __add__(left_obj, right_obj):
-        # Both left_obj and right_obj can access instance methods and attributes:
-        print(right_obj.print_info())
-
         total_points = left_obj.points + right_obj.points
         return Score(total_points)
 
 # ---------------------------------------------------------
 # HOW TO CALL IT:
 # ---------------------------------------------------------
-round1 = Score(10)
-round2 = Score(15)
+round1 = Score(10)  
+round2 = Score(15)  
 
 # Writing 'round1 + round2' triggers: round1.__add__(round2)
 final_score = round1 + round2
 
 print(final_score.points)  # Outputs: 25
-```
