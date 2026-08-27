@@ -2,7 +2,7 @@
 
 ## Key Takeaway: How to Study Documentation Effectively
 
-Reading official documentation is a core skill for any developer. Instead of guessing how a library works, we can look at the **class definitions**, **constructors**, **class methods**, and **magic methods** directly from the source.
+Reading official documentation is a core skill for any developer. We can look at the **class definitions**, **constructors**, **class methods**, and **magic methods** directly from the source.
 
 Below are two case studies breaking down how to read and interpret documentation using Python's built-in `datetime` library and the third-party `inflect` library.
 
