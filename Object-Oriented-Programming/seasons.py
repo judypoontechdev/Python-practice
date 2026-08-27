@@ -1,3 +1,7 @@
+# Objective: Prompt the user for their date of birth (YYYY-MM-DD),
+# calculate the total elapsed minutes up to today, and convert 
+# the numeric result into words using the inflect library.
+
 from datetime import date
 import sys
 import inflect
