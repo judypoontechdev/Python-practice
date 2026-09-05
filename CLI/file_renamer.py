@@ -18,37 +18,40 @@ is_dry = '--dry' in sys.argv
 # path = os.path.abspath(dir)
 # p = Path(path)
 
+found = False
+
 # Check whether it is really a folder
-try:
-    for path in search_root.rglob(target_dir):
-        if path.is_dir():
-            for file in path.iterdir():
+for path in search_root.rglob(target_dir):
+    if path.is_dir():
+        found = True
 
-                # Replace all empty spaces with underscore regardless of latest access time
-                name = file.name
-                underscore = name.replace(' ', '_')
+        for file in path.iterdir():
 
-                # Calculate days since file last access
-                time_since_last_access = datetime.now() - datetime.fromtimestamp(file.stat().st_atime)
-                days_since_last_access = time_since_last_access.days
+            # Replace all empty spaces with underscore regardless of latest access time
+            name = file.name
+            underscore = name.replace(' ', '_')
 
-                # Determine if last access has exceeded 30 days and if yes, add archived_ to the beginning of the filename
-                if days_since_last_access > 30:
-                    archived = f'archived_{underscore}'
+            # Calculate days since file last access
+            time_since_last_access = datetime.now() - datetime.fromtimestamp(file.stat().st_atime)
+            days_since_last_access = time_since_last_access.days
 
-                    new_path = file.parent / archived
-                    os.rename(file, new_path)
+            # Determine if last access has exceeded 30 days and if yes, add archived_ to the beginning of the filename
+            if days_since_last_access > 30:
+                archived = f'archived_{underscore}'
+
+                new_path = file.parent / archived
+                os.rename(file, new_path)
                     
-                else:
-                    new_path = file.parent / underscore
-                    os.rename(file, new_path)
+            else:
+                new_path = file.parent / underscore
+                os.rename(file, new_path)
 
-                # Dry-run
-                if is_dry:
-                    print(f"[DRY RUN] Would rename: '{file.name}' -> '{new_path.name}' (Days inactive: {days_since_last_access})")
-                else:
-                    os.rename(file, new_path)
-                    print(f"[SUCCESS] Renamed: '{file.name}' -> '{new_path.name}'")
+            # Dry-run
+            if is_dry:
+                print(f"[DRY RUN] Would rename: '{file.name}' -> '{new_path.name}' (Days inactive: {days_since_last_access})")
+            else:
+                os.rename(file, new_path)
+                print(f"[SUCCESS] Renamed: '{file.name}' -> '{new_path.name}'")
 
-except FileNotFoundError:
-    raise FileNotFoundError('File not exists, please retype!')
+if not found:
+    raise FileNotFoundError(f"Target directory '{target_dir}' not found anywhere in home directory!")
