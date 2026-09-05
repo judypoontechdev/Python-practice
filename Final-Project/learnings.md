@@ -4,7 +4,7 @@
 
 When designing a personal finance tracker, tracking the cumulative running total is essential. Initially, setting `total = 0` in the script serves to initialize the tracking mechanism. However, a major bottleneck arises: every time the script is rerun from the terminal, the running total resets and only reflects the newly inputted transaction rather than accumulating past historical records.
 
-- **The Reason**: Every script execution allocates an isolated, temporary block of **RAM (Random Access Memory)**. Because RAM is volatile memory, all runtime variables are completely wiped the moment the program finishes executing.
+- **The Reason**: Every script execution allocates an isolated, temporary block of **RAM**. Because RAM is volatile memory, all runtime variables are completely wiped the moment the program finishes executing.
 - **The Solution**: To prevent data loss between runs, the program must implement a retrieval function (such as `get_previous_total()`) to fetch the persistent historical balance directly from disk storage (`finance.csv`) before processing new inputs.
 
 ---
